@@ -6,6 +6,12 @@ let ready = function (fn) {
   }
 };
 
+let getElementByXPath = function (xpath) {
+  return document.evaluate(
+    xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null
+  ).singleNodeValue;
+};
+
 let fn = function () {
   window.dispatchEvent(new KeyboardEvent('keydown', {
     keyCode: 83,
@@ -14,29 +20,9 @@ let fn = function () {
     shiftKey: true,
   }));
 
-  const VIDEO_SELECT = document.evaluate(
-    "//div[text()='Video Bitrate']",
-    document,
-    null,
-    XPathResult.FIRST_ORDERED_NODE_TYPE,
-    null,
-  ).singleNodeValue;
-
-  const AUDIO_SELECT = document.evaluate(
-    "//div[text()='Audio Bitrate']",
-    document,
-    null,
-    XPathResult.FIRST_ORDERED_NODE_TYPE,
-    null,
-  ).singleNodeValue;
-
-  const BUTTON = document.evaluate(
-    "//button[text()='Override']",
-    document,
-    null,
-    XPathResult.FIRST_ORDERED_NODE_TYPE,
-    null,
-  ).singleNodeValue;
+  const VIDEO_SELECT = getElementByXPath("//div[text()='Video Bitrate']");
+  const AUDIO_SELECT = getElementByXPath("//div[text()='Audio Bitrate']");
+  const BUTTON = getElementByXPath("//button[text()='Override']");
 
   if (!(VIDEO_SELECT && AUDIO_SELECT && BUTTON)){
     return false;
