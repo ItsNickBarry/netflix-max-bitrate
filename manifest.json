@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Netflix Max Bitrate",
+  "version": "1.0.0",
+
+  "description": "Automatically override Netflix's automatically selected bitrate in favor of the highest available.",
+
+  "developer": {
+    "name": "Nick Barry"
+  },
+
+  "homepage_url": "https://github.com/itsnickbarry/netflix-max-bitrate",
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.netflix.com/watch/*"],
+      "js": ["netflix_max_bitrate.js"]
+    }
+  ]
+}
