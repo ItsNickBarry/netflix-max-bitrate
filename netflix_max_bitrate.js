@@ -63,18 +63,4 @@ let run = function () {
   fn() || setTimeout(run, 100);
 };
 
-// ready(run);
-
 run();
-
-
-// ready(function () {
-//   document.addEventListener('keydown', function (event) {
-//     console.log('start');
-//     if (!done &&event.ctrlKey && event.altKey && event.shiftKey && 83 == event.keyCode) {
-//       console.log('okay');
-//       run();
-//     }
-//   });
-//
-// });
