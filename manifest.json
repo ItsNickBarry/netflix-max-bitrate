@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Netflix Max Bitrate",
-  "version": "1.0.0",
+  "version": "1.0.1",
 
   "description": "Automatically override Netflix's automatically selected bitrate in favor of the highest available.",
 
@@ -14,7 +14,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://www.netflix.com/watch/*"],
+      "matches": ["*://www.netflix.com/*"],
       "js": ["netflix_max_bitrate.js"]
     }
   ]

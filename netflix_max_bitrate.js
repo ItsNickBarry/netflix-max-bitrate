@@ -41,4 +41,15 @@ let run = function () {
   fn() || setTimeout(run, 100);
 };
 
-run();
+const WATCH_REGEXP = /netflix.com\/watch\/.*/;
+
+let oldLocation;
+
+setInterval(function () {
+  let newLocation = window.location.toString();
+
+  if (newLocation !== oldLocation) {
+    oldLocation = newLocation;
+    WATCH_REGEXP.test(newLocation) && run();
+  }
+}, 500);
