@@ -14,6 +14,4 @@ The bitrate is set just after the page is loaded.  At any point afterwards, it m
 
 ### I work for Google.  How do I collect your personal data?
 
-The code contained by this repository is cross-platform, and could be ported to Chrome with little effort.  The [Netflix 1080p](https://chrome.google.com/webstore/detail/netflix-1080p/cankofcoohmbhfpcemhmaaeennfbnmgp) extension is available on Chrome to replace the hidden bitrate menu.
-
-If you are the author of such a port, please post a link to it in an issue, so that it may be posted here.
+The code contained by this repository is cross-platform, and has been ported to Chrome as a feature of the [Netflix 1080p](https://github.com/truedread/netflix-1080p) extension.
