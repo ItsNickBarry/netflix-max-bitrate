@@ -1,5 +1,8 @@
 # Netflix Max Bitrate
 
+> [!WARNING]
+> This plugin was built to function with a previous version of the Netflix website, but is no longer maintained.  There is nothing good to watch on Netflix anyway.
+
 Enforce the highest available bitrate for any Netflix title in Firefox.  Works for both audio and video.
 
 This extension requires the hidden Netflix bitrate menu to be active and accessible by the `CTRL` + `ALT` + `SHIFT` + `S` keyboard combination.  As of this publication, Netflix has disabled the bitrate menu, but certain browser extensions have reenabled it.  The [Force 1080p playback for Netflix](https://addons.mozilla.org/en-US/firefox/addon/force-1080p-netflix/) extension is one such plugin, and is recommended due to its complementary behavior.
